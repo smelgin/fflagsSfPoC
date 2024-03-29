@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-26-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card variant="Narrow" title="Account Scoring" icon-name="custom:custom29">
+        <template if:true={account.data}>
+            <template if:true={showNewUIComponents}>
+                <div class="slds-m-around_medium">
+                    <c-score-chart client-score={clientScore} industry={industry} media-score={mediaScore}></c-score-chart>
+                </div>
+            </template>
+            <div class="slds-card__body slds-card__body_inner">
+                <p><b>Name:</b> {name}</p>
+                <p><b>Type:</b> {aType}</p>
+                <p><b>Number of Employees:</b> {numberOfEmployees}</p>
+                <p><b>Website:</b> {website}</p>
+                <p><b>Phone:</b> {phone}</p>
+                <p><b>Annual Revenue:</b> {annualRevenue}</p>
+                <p><b>Industry:</b> {industry}</p>
+                <p><b>Client Score:</b> {clientScore}</p>
+            </div>
+        
+        </template>        
+    </lightning-card>
+</template>
