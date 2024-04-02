@@ -3,6 +3,7 @@ public with sharing class ScoreChartController {
 
     @AuraEnabled
     public static Integer getIndustryScore(String industry) {
+        // FFLIB: The following code SHOULD BE in a method in the AccountsService class
         Integer score;
         FeatureFlags flags = new FeatureFlags();
         if(flags.evaluate('simpleRustWs').isEnabled()){
